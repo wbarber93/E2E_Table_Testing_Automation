@@ -1,0 +1,89 @@
+CREATE TABLE FINOTC_LCR_SRC_DATA1 (
+    entity_identifier int,
+    group_by1 string,
+    balance_in_ccy1 int,
+    balance_in_ccy2 float,
+    string_col string
+);
+
+CREATE TABLE FINOTC_LCR_REP_DATA1 (
+    entity_identifier int,
+    group_by1 int,
+    group_by2 string,
+    balance int,
+    balance2 float,
+    string_col string
+);
+
+CREATE TABLE RWA_REPORTING_INTER_DATA (
+    identifier2 int,
+    group_by1 int,
+    balance int,
+    balance2 float,
+    string_col string,
+    string_col2 string,
+    balance3 float
+);
+
+CREATE TABLE RWA_PRA_DATA (
+    entity_identifier int,
+    balance_ccy1 float,
+    string_col string,
+    string_col2 string,
+    balance_ccy2 float
+);
+
+
+CREATE TABLE LIQ_PRA_DATA (
+    entity_identifier int,
+    balance_ccy1 float,
+    string_col string,
+    string_col2 string,
+    balance_ccy2 float
+);
+
+
+CREATE TABLE CRM_BB_PRODUCT_DATA (
+    entity_identifier int,
+    groupby1 int,
+    groupby2 int,
+    balance1 float,
+    string_col string,
+    string_col2 string,
+    balance2 float
+);
+
+INSERT INTO FINOTC_LCR_SRC_DATA1 VALUES ('3600', 'ENG', '462826', '423.176', 'test');
+INSERT INTO FINOTC_LCR_SRC_DATA1 VALUES ('8383', 'FRA', '675474', '3554123.8587', 'test1');
+INSERT INTO FINOTC_LCR_SRC_DATA1 VALUES ('3600', 'SWE', '97132436', '759493.876', 'test2');
+INSERT INTO FINOTC_LCR_SRC_DATA1 VALUES ('8383', 'ENG', '4182', '78113.2', 'test3');
+
+INSERT INTO FINOTC_LCR_REP_DATA1 VALUES ('1010111', '9999', 'GBP', '423', '23.5842', 'test');
+INSERT INTO FINOTC_LCR_REP_DATA1 VALUES ('0010100', '0953', 'USD', '3554123', '104.2649', 'test1');
+INSERT INTO FINOTC_LCR_REP_DATA1 VALUES ('1101', '99435', 'USD', '759493', '7834.2942', 'test2');
+INSERT INTO FINOTC_LCR_REP_DATA1 VALUES ('1101', '30177', 'EUR', '78113', '2.38305', 'test3');
+INSERT INTO FINOTC_LCR_REP_DATA1 VALUES ('1010111', '31002', 'YEN', '78113', '0.89263', 'test4');
+
+INSERT INTO RWA_REPORTING_INTER_DATA VALUES ('3600', '999999', '423', '23.5842', 'test', 'GBP', '293.642');
+INSERT INTO RWA_REPORTING_INTER_DATA VALUES ('8383', '311777', '3554123', '104.2649', 'test1','USD', '2302425.1');
+INSERT INTO RWA_REPORTING_INTER_DATA VALUES ('3600', '999999', '759493', '7834.2942', 'test2', 'USD', '29850.85');
+INSERT INTO RWA_REPORTING_INTER_DATA VALUES ('8383', '311777', '78113', '2.38305', 'test3', 'EUR', '7882.683');
+INSERT INTO RWA_REPORTING_INTER_DATA VALUES ('8383', '311777', '78113', '0.89263', 'test4', 'YEN', '59018.602');
+
+INSERT INTO RWA_PRA_DATA VALUES ('3600', '283042.32', 'test', 'test', '90723926.237');
+INSERT INTO RWA_PRA_DATA VALUES ('2934', '2372.23', 'test', 'test', '9435926.7');
+INSERT INTO RWA_PRA_DATA VALUES ('7493', '9372.632', 'TEST', 'TEST', '7295356.237');
+INSERT INTO RWA_PRA_DATA VALUES ('3600', '745027594.37834', 'TEST', 'TEST', '532626.237');
+INSERT INTO RWA_PRA_DATA VALUES ('7493', '283834.34', 'TEST', 'TEST', '43267.900');
+
+INSERT INTO LIQ_PRA_DATA VALUES ('9999', '26245.32', 'TEST', 'TEST', '113926.237');
+INSERT INTO LIQ_PRA_DATA VALUES ('9999', '9643572.23', 'TEST', 'TEST', '97235926.7');
+INSERT INTO LIQ_PRA_DATA VALUES ('9999', '13472.632', 'TEST', 'TEST', '8655356.237');
+INSERT INTO LIQ_PRA_DATA VALUES ('37393', '578564.36584', 'TEST', 'TEST', '234626.237');
+INSERT INTO LIQ_PRA_DATA VALUES ('0582', '2148644.34', 'TEST', 'TEST', '43427.93240');
+
+INSERT INTO CRM_BB_PRODUCT_DATA VALUES ('9999', '890000', '91267', '26245.32', 'TEST', 'TEST', '5553126.237');
+INSERT INTO CRM_BB_PRODUCT_DATA VALUES ('3600', '890000', '91267', '26245.32', 'TEST', 'TEST', '34926.237');
+INSERT INTO CRM_BB_PRODUCT_DATA VALUES ('3811', '890000', '91267', '32795.32', 'TEST', 'TEST', '432.21117');
+INSERT INTO CRM_BB_PRODUCT_DATA VALUES ('3811', '9370', '91267', '09651245.3', 'TEST', 'TEST', '11123926.237');
+INSERT INTO CRM_BB_PRODUCT_DATA VALUES ('9999', '9870', '91267', '86723245.32', 'TEST', 'TEST', '57677926.237');
